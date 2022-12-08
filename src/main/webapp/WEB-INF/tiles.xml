@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- trang gốc chứa các phần không thay đổi trên tất cả các trang như header footer
+    , các phần thay đổi sẽ để trống cho trang con kế thừa sửa lại -->
+    <definition name="baseLayout"
+                template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title"
+                       value="" />
+        <put-attribute name="header"
+                       value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content"
+                       value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+
+    <!-- trang kế thừa trang gốc sửa các phần thay đổi như title, địa chỉ trang chứa phần nội dung -->
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title"
+                       value="Trang chủ" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+
+    <definition name="product-detail" extends="baseLayout">
+        <put-attribute name="title"
+                       value="Chi tiết sản phẩm" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/product-detail.jsp" />
+    </definition>
+
+    <definition name="cart" extends="baseLayout">
+        <put-attribute name="title"
+                       value="Giỏ hàng" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/cart.jsp" />
+    </definition>
+
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title"
+                       value="Đăng nhập" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title"
+                       value="Đăng ký" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+
+    <definition name="add-product" extends="baseLayout">
+        <put-attribute name="title"
+                       value="Thêm sản phẩm" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/add-product.jsp" />
+    </definition>
+
+
+    <!-- trang gốc của admin chứa các phần không thay đổi trên tất cả các trang như header footer
+, các phần thay đổi sẽ để trống cho trang con kế thừa sửa lại -->
+    <definition name="baseAdminLayout"
+                template="/WEB-INF/layout/base-admin.jsp">
+        <put-attribute name="title"
+                       value="Quản trị hệ thống bán hàng" />
+        <put-attribute name="left"
+                       value="/WEB-INF/layout/admin-left.jsp" />
+        <put-attribute name="content"
+                       value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/admin-footer.jsp" />
+    </definition>
+
+    <definition name="category-stats" extends="baseAdminLayout">
+        <put-attribute name="title"
+                       value="Thống kê sản phẩm theo danh mục" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/category-stats.jsp" />
+    </definition>
+
+    <definition name="product-stats" extends="baseAdminLayout">
+        <put-attribute name="title"
+                       value="Thống kê doanh thu theo sản phẩm" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/product-stats.jsp" />
+    </definition>
+
+    <definition name="product-month-stats" extends="baseAdminLayout">
+        <put-attribute name="title"
+                       value="Thống kê doanh thu theo thời gian(tháng)" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/product-month-stats.jsp" />
+    </definition>
+
+    <definition name="product-day-stats" extends="baseAdminLayout">
+        <put-attribute name="title"
+                       value="Thống kê doanh thu theo thời gian(ngày" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/product-day-stats.jsp" />
+    </definition>
+</tiles-definitions>

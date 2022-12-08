@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringMvcHibernateSaleApp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SpringMvcHibernateSaleApp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SpringMvcHibernateSaleApp-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SpringMvcHibernateSaleApp:war exploded" />
+    </root>
+  </artifact>
+</component>

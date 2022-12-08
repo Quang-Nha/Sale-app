@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="mysql">
+    <option name="defaultUnitInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="219509e7-e598-4e65-9bf0-a56004ae22dd" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/com/nhale/pojos" />
+  </component>
+</project>
