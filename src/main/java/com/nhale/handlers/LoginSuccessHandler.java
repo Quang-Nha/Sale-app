@@ -20,7 +20,7 @@ import java.io.IOException;
  * method của nó sẽ được gọi và thực thi các công việc cần thiết sau khi login thành công
  * @author LeNha
  */
-@Component // cần annotation này để sử dụng được @Autowired bean
+@Component // cần annotation này để coi đây là bean tự động tạo sẽ sử dụng được @Autowired bean
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
     @Autowired

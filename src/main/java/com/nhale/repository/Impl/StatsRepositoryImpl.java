@@ -181,7 +181,7 @@ public class StatsRepositoryImpl implements StatsRepository {
         // cột 1 gọi hàm lấy giá trị tháng của SaleOrder.createdDate
         // cột 2 gọi hàm lấy giá trị năm của SaleOrder.createdDate
         criteriaQuery.groupBy(builder.function("MONTH", Integer.class, rootO.get("createdDate")),
-                builder.function("YEAR", Integer.class, rootO.get("createdDate")));
+                builder.function("YEAR", Integer.class, rootO.get("createdDate")), rootO.get("createdDate"));
 
         // xắp xếp tăng dần theo thời gian SaleOrder.createdDate
         criteriaQuery.orderBy(builder.asc(rootO.get("createdDate")));
@@ -254,7 +254,7 @@ public class StatsRepositoryImpl implements StatsRepository {
         criteriaQuery.groupBy(
                 builder.function("DAY", Integer.class, rootO.get("createdDate")),
                 builder.function("MONTH", Integer.class, rootO.get("createdDate")),
-                builder.function("YEAR", Integer.class, rootO.get("createdDate")));
+                builder.function("YEAR", Integer.class, rootO.get("createdDate")), rootO.get("createdDate"));
 
         // xắp xếp tăng dần theo thời gian SaleOrder.createdDate
         criteriaQuery.orderBy(builder.asc(rootO.get("createdDate")));

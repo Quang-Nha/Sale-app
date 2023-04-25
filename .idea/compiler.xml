@@ -9,8 +9,5 @@
         <module name="SpringMvcHibernateSaleApp" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SpringMvcHibernateSaleApp" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
